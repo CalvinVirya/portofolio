@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calvin Virya — Portfolio</title>
+    <title>Calvin Virya Yunardy — Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- SwiperJS for project sliders -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -13,31 +13,41 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Small utility to avoid image flicker during transition */
+        .swiper-slide img {
+            -webkit-user-drag: none;
+            user-drag: none;
+            user-select: none;
+        }
     </style>
 </head>
 
 <body class="bg-[#0A0F1F] text-[#E2E8F0] font-sans">
 
     <!-- Header -->
-    <header class="text-center py-20 bg-gradient-to-br from-[#00FFC6] via-[#5E17EB] to-[#111827] shadow-lg">
-        <h1
-            class="text-5xl font-extrabold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#00FFC6] via-[#38BDF8] to-[#5E17EB]">
-            Calvin Virya
-        </h1>
-        <p class="text-lg text-gray-200">Software Developer • Web & Mobile Enthusiast</p>
-        <nav class="mt-6 space-x-6">
-            <a href="#about" class="hover:text-[#00FFC6] transition">About</a>
-            <a href="#projects" class="hover:text-[#00FFC6] transition">Projects</a>
-            <a href="#tools" class="hover:text-[#00FFC6] transition">Tools</a>
-            <a href="#experiences" class="hover:text-[#00FFC6] transition">Experiences</a>
-            <a href="#contact" class="hover:text-[#00FFC6] transition">Contact</a>
-        </nav>
+    <header class="text-center py-12 md:py-20 bg-gradient-to-br from-[#00FFC6] via-[#5E17EB] to-[#111827] shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#00FFC6] via-[#38BDF8] to-[#5E17EB]">
+                Calvin Virya Yunardy
+            </h1>
+            <p class="text-base sm:text-lg md:text-lg text-gray-200">Software Developer • Web & Mobile Enthusiast</p>
+            <nav class="mt-4 md:mt-6 space-x-4 md:space-x-6 text-sm sm:text-base">
+                <!-- kept navbar visible (no hamburger) per your request -->
+                <a href="#about" class="hover:text-[#00FFC6] transition inline-block py-1">About</a>
+                <a href="#projects" class="hover:text-[#00FFC6] transition inline-block py-1">Projects</a>
+                <a href="#tools" class="hover:text-[#00FFC6] transition inline-block py-1">Tools</a>
+                <a href="#experiences" class="hover:text-[#00FFC6] transition inline-block py-1">Experiences</a>
+                <a href="#contact" class="hover:text-[#00FFC6] transition inline-block py-1">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <!-- About -->
-    <section id="about" class="max-w-4xl mx-auto py-20 px-6 text-center">
-        <h2 class="text-4xl font-bold mb-6 text-[#00FFC6]">About Me</h2>
-        <p class="text-[#94A3B8] leading-relaxed text-lg">
+    <section id="about" class="max-w-4xl mx-auto py-12 sm:py-16 px-4 text-center">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#00FFC6]">About Me</h2>
+        <p class="text-[#94A3B8] leading-relaxed text-base sm:text-lg">
             Hi, I’m <span class="text-white font-semibold">Calvin</span> — a developer passionate about crafting
             <span class="text-[#00FFC6]">clean, functional, and elegant</span> applications.
             I love blending technology and design to build products that are both smart and aesthetic.
@@ -45,13 +55,14 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="bg-[#111827] py-20 px-6">
-        <h2 class="text-4xl font-bold text-center text-[#00FFC6] mb-12">Featured Projects</h2>
-        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto fade-section">
+    <section id="projects" class="bg-[#111827] py-12 sm:py-16 md:py-20 px-4">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#00FFC6] mb-8 sm:mb-12">Featured
+            Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto fade-section">
 
             <!-- Banboo Store -->
             <div
-                class="bg-[#1E293B] p-6 rounded-xl shadow-lg hover:shadow-[#00FFC6]/30 transition-all hover:-translate-y-1">
+                class="bg-[#1E293B] p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-[#00FFC6]/30 transition-all hover:-translate-y-1">
                 <div class="swiper mySwiper rounded-lg overflow-hidden mb-4">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="assets/Banboo_SplashScreen.jpg"
@@ -69,128 +80,248 @@
                         <div class="swiper-slide"><img src="assets/Banboo_Detail1.jpg"
                                 class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
                         </div>
-                        <div class="swiper-slide"><img src="assets/Banboo_Detail2.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_Checkout.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_Payment.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_Search.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_SearchA.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_SearchS.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_SearchM.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_Profile.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_About.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_Admin.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_Insert.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_InsertFilled.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_UpdateMenu.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_UpdateFilled.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_Update.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_Delete.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Banboo_DeleteConfirm.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
+                        <div class="swiper-slide"><img src="assets/Banboo_Detail2.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_Checkout.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_Payment.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_Search.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_SearchA.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_SearchS.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_SearchM.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_Profile.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_About.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_Admin.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_Insert.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_InsertFilled.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_UpdateMenu.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_UpdateFilled.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_Update.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_Delete.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Banboo_DeleteConfirm.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-white">Banboo Store</h3>
-                <p class="text-[#94A3B8] mb-3">E-commerce app for bamboo-based products (Flutter)</p>
+                <h3 class="text-lg sm:text-xl font-semibold mb-1 text-white">Banboo Store</h3>
+                <p class="text-[#94A3B8] mb-2 text-sm sm:text-base">E-commerce app for bamboo-based products (Flutter)
+                </p>
                 <a href="https://github.com/CalvinVirya/Banboo_Store" target="_blank"
-                    class="text-[#00FFC6] hover:underline">View on GitHub</a>
+                    class="text-[#00FFC6] hover:underline text-sm sm:text-base">View on GitHub</a>
             </div>
 
             <!-- Bee4 -->
             <div
-                class="bg-[#1E293B] p-6 rounded-xl shadow-lg hover:shadow-[#00FFC6]/30 transition-all hover:-translate-y-1">
+                class="bg-[#1E293B] p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-[#00FFC6]/30 transition-all hover:-translate-y-1">
                 <div class="swiper mySwiper rounded-lg overflow-hidden mb-4">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="assets/Bee4_Login.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Bee4_Register.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Bee4_DetailInsert.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Bee4_Home.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Bee4_ForumInsert.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Bee4_ForumReply.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Bee4_Search.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Bee4_UserDetail1.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Bee4_UserDetail2.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Bee4_UpdateUser.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Bee4_About1.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/Bee4_About2.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
+                        <div class="swiper-slide"><img src="assets/Bee4_Login.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Bee4_Register.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Bee4_DetailInsert.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Bee4_Home.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Bee4_ForumInsert.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Bee4_ForumReply.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Bee4_Search.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Bee4_UserDetail1.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Bee4_UserDetail2.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Bee4_UpdateUser.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Bee4_About1.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/Bee4_About2.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-white">Bee4</h3>
-                <p class="text-[#94A3B8] mb-3">Forum platform for Binusian community (HTML, CSS, JS, Bootstrap)</p>
+                <h3 class="text-lg sm:text-xl font-semibold mb-1 text-white">Bee4</h3>
+                <p class="text-[#94A3B8] mb-2 text-sm sm:text-base">Forum platform for Binusian community (HTML, CSS,
+                    JS, Bootstrap)</p>
                 <a href="https://github.com/CalvinVirya/Bee4" target="_blank"
-                    class="text-[#00FFC6] hover:underline">View on GitHub</a>
+                    class="text-[#00FFC6] hover:underline text-sm sm:text-base">View on GitHub</a>
             </div>
 
             <!-- DoJo Movie -->
             <div
-                class="bg-[#1E293B] p-6 rounded-xl shadow-lg hover:shadow-[#00FFC6]/30 transition-all hover:-translate-y-1">
+                class="bg-[#1E293B] p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-[#00FFC6]/30 transition-all hover:-translate-y-1">
                 <div class="swiper mySwiper rounded-lg overflow-hidden mb-4">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="assets/DOJO_Landing.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/DOJO_Login.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/DOJO_Register.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/DOJO_OTP.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/DOJO_Home1.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/DOJO_Home2.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/DOJO_SideBar.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/DOJO_History.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/DOJO_Detail.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/DOJO_Profile.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/DOJO_LogOutConfirm.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
+                        <div class="swiper-slide"><img src="assets/DOJO_Landing.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/DOJO_Login.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/DOJO_Register.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/DOJO_OTP.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/DOJO_Home1.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/DOJO_Home2.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/DOJO_SideBar.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/DOJO_History.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/DOJO_Detail.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/DOJO_Profile.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/DOJO_LogOutConfirm.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-white">DoJo Movie</h3>
-                <p class="text-[#94A3B8] mb-3">Kotlin Android app for movie discovery and recommendations</p>
+                <h3 class="text-lg sm:text-xl font-semibold mb-1 text-white">DoJo Movie</h3>
+                <p class="text-[#94A3B8] mb-2 text-sm sm:text-base">Kotlin Android app for movie discovery and
+                    recommendations</p>
                 <a href="https://github.com/CalvinVirya/DoJo-Movie" target="_blank"
-                    class="text-[#00FFC6] hover:underline">View on GitHub</a>
+                    class="text-[#00FFC6] hover:underline text-sm sm:text-base">View on GitHub</a>
             </div>
 
             <!-- Shadow Space -->
             <div
-                class="bg-[#1E293B] p-6 rounded-xl shadow-lg hover:shadow-[#00FFC6]/30 transition-all hover:-translate-y-1">
+                class="bg-[#1E293B] p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-[#00FFC6]/30 transition-all hover:-translate-y-1">
                 <div class="swiper mySwiper rounded-lg overflow-hidden mb-4">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="assets/SS_Login.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/SS_Register.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/SS_ForYou.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/SS_FYComment.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/SS_Trending.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/SS_Coments.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/SS_News.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/SS_NewsDetails.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/SS_Profile.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/SS_About.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
+                        <div class="swiper-slide"><img src="assets/SS_Login.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/SS_Register.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/SS_ForYou.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/SS_FYComment.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/SS_Trending.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/SS_Coments.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/SS_News.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/SS_NewsDetails.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/SS_Profile.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/SS_About.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-white">Shadow Space</h3>
-                <p class="text-[#94A3B8] mb-3">Post, Comment, Reply, Stay Anonymous...</p>
-                <p class="text-[#94A3B8] mb-3">A Twitter clone using Flutter, Firebase, and News API</p>
+                <h3 class="text-lg sm:text-xl font-semibold mb-1 text-white">Shadow Space</h3>
+                <p class="text-[#94A3B8] mb-1 text-sm sm:text-base">Post, Comment, Reply, Stay Anonymous...</p>
+                <p class="text-[#94A3B8] mb-3 text-sm sm:text-base">A Twitter clone using Flutter, Firebase, and News
+                    API</p>
                 <a href="https://github.com/Joseeul/shadow-space" target="_blank"
-                    class="text-[#00FFC6] hover:underline">View on GitHub</a>
+                    class="text-[#00FFC6] hover:underline text-sm sm:text-base">View on GitHub</a>
             </div>
 
             <!-- LOLgic -->
             <div
-                class="bg-[#1E293B] p-6 rounded-xl shadow-lg hover:shadow-[#00FFC6]/30 transition-all hover:-translate-y-1">
+                class="bg-[#1E293B] p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-[#00FFC6]/30 transition-all hover:-translate-y-1">
                 <div class="swiper mySwiper rounded-lg overflow-hidden mb-4">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="assets/LOLgic_SplashScreen.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/LOLgic_Username.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/LOLgic_Home.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/LOLgic_CAH.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/LOLgic_CatFacts.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/LOLgic_RandomJokes.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/LOLgic_TiH.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
-                        <div class="swiper-slide"><img src="assets/LOLgic_UselessFacts.jpg" class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" /></div>
+                        <div class="swiper-slide"><img src="assets/LOLgic_SplashScreen.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/LOLgic_Username.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/LOLgic_Home.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/LOLgic_CAH.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/LOLgic_CatFacts.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/LOLgic_RandomJokes.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/LOLgic_TiH.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
+                        <div class="swiper-slide"><img src="assets/LOLgic_UselessFacts.jpg"
+                                class="w-full h-auto max-h-[500px] object-contain md:max-h-[400px] sm:max-h-[300px]" />
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-white">LOLgic</h3>
-                <p class="text-[#94A3B8] mb-3">A Fun Android Kotlin App Using Mulitple APIs</p>
+                <h3 class="text-lg sm:text-xl font-semibold mb-1 text-white">LOLgic</h3>
+                <p class="text-[#94A3B8] mb-3 text-sm sm:text-base">A Fun Android Kotlin App Using Mulitple APIs</p>
                 <a href="https://github.com/CalvinVirya/LOLgic" target="_blank"
-                    class="text-[#00FFC6] hover:underline">View on
+                    class="text-[#00FFC6] hover:underline text-sm sm:text-base">View on
                     GitHub</a>
             </div>
 
@@ -198,51 +329,53 @@
     </section>
 
     <!-- Tools & Skills -->
-    <section id="tools" class="max-w-5xl mx-auto py-20 px-6 text-center fade-section">
-        <h2 class="text-4xl font-bold text-[#00FFC6] mb-8">Tools & Technologies</h2>
-        <p class="text-[#94A3B8] mb-8 text-lg">Technologies I’ve used across my projects and research:</p>
-        <div class="flex flex-wrap justify-center gap-6">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-12 h-12"
-                title="Flutter" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" class="w-12 h-12"
-                title="Kotlin" />
+    <section id="tools" class="max-w-5xl mx-auto py-10 sm:py-16 px-4 text-center fade-section">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#00FFC6] mb-6 sm:mb-8">Tools & Technologies</h2>
+        <p class="text-[#94A3B8] mb-6 text-sm sm:text-lg">Technologies I’ve used across my projects and research:</p>
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                class="w-10 h-10 sm:w-12 sm:h-12" title="Flutter" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                class="w-10 h-10 sm:w-12 sm:h-12" title="Kotlin" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-                class="w-12 h-12" title="HTML5" />
+                class="w-10 h-10 sm:w-12 sm:h-12" title="HTML5" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-                class="w-12 h-12" title="CSS3" />
+                class="w-10 h-10 sm:w-12 sm:h-12" title="CSS3" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                class="w-12 h-12" title="JavaScript" />
+                class="w-10 h-10 sm:w-12 sm:h-12" title="JavaScript" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
-                class="w-12 h-12" title="Bootstrap" />
+                class="w-10 h-10 sm:w-12 sm:h-12" title="Bootstrap" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-                class="w-12 h-12" title="TailwindCss" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-12 h-12"
-                title="React" />
+                class="w-10 h-10 sm:w-12 sm:h-12" title="TailwindCss" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                class="w-10 h-10 sm:w-12 sm:h-12" title="React" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
-                class="w-12 h-12" title="Supabase" />
+                class="w-10 h-10 sm:w-12 sm:h-12" title="Supabase" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/appwrite/appwrite-original.svg"
-                class="w-12 h-12" title="Appwrite" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-12 h-12"
-                title="Firebase" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-12 h-12"
-                title="MySQL" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-12 h-12"
-                title="GitHub" />
+                class="w-10 h-10 sm:w-12 sm:h-12" title="Appwrite" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                class="w-10 h-10 sm:w-12 sm:h-12" title="Firebase" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                class="w-10 h-10 sm:w-12 sm:h-12" title="MySQL" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                class="w-10 h-10 sm:w-12 sm:h-12" title="GitHub" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                class="w-12 h-12" title="Python" />
+                class="w-10 h-10 sm:w-12 sm:h-12" title="Python" />
         </div>
     </section>
 
     <!-- Experiences -->
-    <section id="experiences" class="bg-[#111827] py-20 px-6 fade-section">
-        <h2 class="text-4xl font-bold text-center text-[#00FFC6] mb-12">Organization Experiences</h2>
-        <div class="max-w-4xl mx-auto space-y-8">
+    <section id="experiences" class="bg-[#111827] py-10 sm:py-16 px-4 fade-section">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#00FFC6] mb-8 sm:mb-12">Organization
+            Experiences</h2>
+        <div class="max-w-4xl mx-auto space-y-6 sm:space-y-8">
 
             <!-- Committee of Skipi Jam -->
-            <div class="bg-[#1E293B] p-6 rounded-xl border border-[#00FFC6]/30 hover:border-[#00FFC6]/60 transition">
-                <h3 class="text-xl font-semibold text-white mb-1">Committee of Skipi Jam</h3>
-                <p class="text-[#94A3B8] text-sm mb-2">Event Organizer — 2022–2023</p>
-                <ul class="list-disc list-inside text-gray-300">
+            <div
+                class="bg-[#1E293B] p-4 sm:p-6 rounded-xl border border-[#00FFC6]/30 hover:border-[#00FFC6]/60 transition">
+                <h3 class="text-lg sm:text-xl font-semibold text-white mb-1">Committee of Skipi Jam</h3>
+                <p class="text-[#94A3B8] text-sm sm:text-base mb-2">Event Organizer — 2022–2023</p>
+                <ul class="list-disc list-inside text-gray-300 text-sm sm:text-base">
                     <li>Arranging proposal</li>
                     <li>Ticketing</li>
                     <li>Arranging carnival games</li>
@@ -250,20 +383,22 @@
             </div>
 
             <!-- HIMTI Activist -->
-            <div class="bg-[#1E293B] p-6 rounded-xl border border-[#00FFC6]/30 hover:border-[#00FFC6]/60 transition">
-                <h3 class="text-xl font-semibold text-white mb-1">HIMTI Activist</h3>
-                <p class="text-[#94A3B8] text-sm mb-2">Commission 1 Activist — 2025–2026</p>
-                <ul class="list-disc list-inside text-gray-300">
+            <div
+                class="bg-[#1E293B] p-4 sm:p-6 rounded-xl border border-[#00FFC6]/30 hover:border-[#00FFC6]/60 transition">
+                <h3 class="text-lg sm:text-xl font-semibold text-white mb-1">HIMTI Activist</h3>
+                <p class="text-[#94A3B8] text-sm sm:text-base mb-2">Commission 1 Activist — 2025–2026</p>
+                <ul class="list-disc list-inside text-gray-300 text-sm sm:text-base">
                     <li>Creating summary</li>
                     <li>Creating VBL</li>
                 </ul>
             </div>
 
             <!-- TECHFEST 2025 Committee -->
-            <div class="bg-[#1E293B] p-6 rounded-xl border border-[#00FFC6]/30 hover:border-[#00FFC6]/60 transition">
-                <h3 class="text-xl font-semibold text-white mb-1">TECHFEST 2025 Committee</h3>
-                <p class="text-[#94A3B8] text-sm mb-2">Security & Accommodation Division — 2025–2026</p>
-                <ul class="list-disc list-inside text-gray-300">
+            <div
+                class="bg-[#1E293B] p-4 sm:p-6 rounded-xl border border-[#00FFC6]/30 hover:border-[#00FFC6]/60 transition">
+                <h3 class="text-lg sm:text-xl font-semibold text-white mb-1">TECHFEST 2025 Committee</h3>
+                <p class="text-[#94A3B8] text-sm sm:text-base mb-2">Security & Accommodation Division — 2025–2026</p>
+                <ul class="list-disc list-inside text-gray-300 text-sm sm:text-base">
                     <li>Creating onsite & online rules</li>
                     <li>Accommodating other division needs</li>
                     <li>Ensuring event security</li>
@@ -273,19 +408,17 @@
         </div>
     </section>
 
-
     <!-- Contact -->
-    <!-- Contact -->
-    <section id="contact" class="max-w-4xl mx-auto py-20 px-6 text-center fade-section">
-        <h2 class="text-4xl font-bold mb-6 text-[#00FFC6]">Contact</h2>
-        <p class="text-[#94A3B8] text-lg">Let’s connect and build something great together.</p>
+    <section id="contact" class="max-w-4xl mx-auto py-10 sm:py-16 px-4 text-center fade-section">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#00FFC6]">Contact</h2>
+        <p class="text-[#94A3B8] text-base sm:text-lg">Let’s connect and build something great together.</p>
 
-        <div class="flex justify-center items-center gap-8 mt-6">
+        <div class="flex justify-center items-center gap-6 sm:gap-8 mt-6">
             <!-- GitHub -->
             <a href="https://github.com/CalvinVirya" target="_blank" class="hover:scale-110 transition-transform"
                 title="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
-                    class="w-8 h-8 text-[#00FFC6] hover:text-[#38BDF8] transition-colors">
+                    class="w-7 h-7 sm:w-8 sm:h-8 text-[#00FFC6] hover:text-[#38BDF8] transition-colors">
                     <path
                         d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.1-1.2-1.4-1.2-1.4-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.9.9 2.9 1.2.1-.7.4-1.3.8-1.8-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.4.1-2.9 0 0 1-.3 3.3 1.2.9-.2 1.8-.3 2.7-.3.9 0 1.8.1 2.7.3 2.3-1.5 3.3-1.2 3.3-1.2.6 1.5.2 2.6.1 2.9.8.9 1.2 2 1.2 3.3 0 4.7-2.7 5.6-5.3 5.9.4.4.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z" />
                 </svg>
@@ -294,7 +427,7 @@
             <!-- Email -->
             <a href="mailto:calvinviryayunardy@gmail.com" class="hover:scale-110 transition-transform" title="Email">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
-                    class="w-8 h-8 text-[#00FFC6] hover:text-[#38BDF8] transition-colors">
+                    class="w-7 h-7 sm:w-8 sm:h-8 text-[#00FFC6] hover:text-[#38BDF8] transition-colors">
                     <path
                         d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.24l7.45 6.27a1 1 0 0 0 1.1 0L20 8.24V18H4z" />
                 </svg>
@@ -304,7 +437,7 @@
             <a href="https://www.linkedin.com/in/calvin-virya-b36539305/" target="_blank"
                 class="hover:scale-110 transition-transform" title="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
-                    class="w-8 h-8 text-[#00FFC6] hover:text-[#38BDF8] transition-colors">
+                    class="w-7 h-7 sm:w-8 sm:h-8 text-[#00FFC6] hover:text-[#38BDF8] transition-colors">
                     <path
                         d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.09.88 1.97 1.98 1.97S6.95 6.57 6.95 5.48A1.98 1.98 0 0 0 4.98 3.5zM3.5 8.25H6.5V21H3.5V8.25zM9.5 8.25H12.4V9.9h.04c.4-.7 1.4-1.4 2.9-1.4 3.1 0 3.7 2 3.7 4.7V21h-3v-6c0-1.4 0-3.3-2-3.3s-2.3 1.5-2.3 3.2V21h-3V8.25z" />
                 </svg>
@@ -312,16 +445,18 @@
         </div>
     </section>
 
-
     <footer class="bg-[#0A0F1F] text-center py-6 text-[#94A3B8] border-t border-[#1E293B]">
-        © 2025 Calvin Virya. All rights reserved.
+        © 2025 Calvin Virya Yunardy. All rights reserved.
     </footer>
 
     <script>
-        // Swiper initialization (manual slide)
-        new Swiper(".mySwiper", {
-            pagination: { el: ".swiper-pagination", clickable: true },
-            loop: true,
+        // Initialize Swiper for each instance of .mySwiper (supports multiple)
+        document.querySelectorAll('.mySwiper').forEach((el) => {
+            new Swiper(el, {
+                pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+                loop: true,
+                // preserve default look/feel — no autoplay added to keep behaviour identical
+            });
         });
 
         // Fade-in on scroll animation
